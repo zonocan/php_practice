@@ -55,23 +55,23 @@ $calendar = array(
     $start = 1;
     $end = 10000;
     $total = 0;
-    for($i = $start; $i <= $end; $i++ ){
+    for ($i = $start; $i <= $end; $i++) {
         $total += $i;
     }
-    echo $total."\n";
+        echo $total . "\n";
     
    
  //課題3
-     $fruits = array ("apple","greap","lemon","mango","painaple");
+    $fruits = array("apple", "greap", "lemon", "mango", "painaple");
     
     foreach ($fruits as $fruit) {
-        echo $fruit."\n";
+        echo $fruit . "\n";
     }
 
  //課題4
-     for ($i = 1; $i <= 100; $i++) {
+    for ($i = 1; $i <= 100; $i++) {
         if ($i % 5 == 0) {
-            echo $i."\n";
+            echo $i . "\n";
         }
     }
     
