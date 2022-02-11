@@ -13,31 +13,53 @@ function sum($max){
         $result += $i;
     }
     //$resultを結果として返していく
-    return $result;
+    return $result . "\n";
 }
 
 echo sum (100);
 
 
 //課題1(2倍の関数)
-    function num($n){
-        
-        $num_n = $n;
-        
-        
-        return $num_n*2;
+
+function num($n){
+    $result = $n;
+    return $result * 2 . "\n";
+}
     
-        
-    }
-    
-    echo num();
+echo num(100);
     
 //課題2($aと$bをたす課題)
-    function add($a,$b){
-        $num_add = $a+$b;
-        return $num_add;
-    }
-    echo add(103,119);
+
+function add($a,$b){
+    $result = $a+$b;
+    return $result;
+}
     
+echo add(198,119) . "\n";
+    
+//課題3
+function number($arr){
+    $result = $arr[0];
+    for ($i = 1; $i <count($arr); $i++){
+         $result *= $arr[$i];   
+    }
+    return $result;
+}
+    
+echo number(array(1,3,5,7,9)) . "\n";
+    
+//課題4
+function max_array($arr){
+    $max_number = $arr[0];
+    foreach($arr as $a){
+        if ($a > $max_number) {
+            $max_number = $a;
+        }
+    }
+        
+    return $max_number;
+}
+        
+echo max_array(array(1000,900,89900,925,1,100));
     
 ?>
