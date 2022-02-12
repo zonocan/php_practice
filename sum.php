@@ -57,11 +57,15 @@
         return $max_number;
     }
             
-    echo max_array(array(1000,900,89900,925,1,100000000)) . "\n";
+    echo max_array(array(1000, 900, 89900, 925, 1, 100000000)) . "\n";
     
 //課題5
 
-    //strip_tags
+    //strip_tagsの除去前
+    $text = '<p>テスト</p><!-- coment(ここを除去) --><a href>リンク</a>';
+    echo $text . "\n";
+        
+    //strip_tagsした後（<p>タグと<a>タグだけの表示）
     $text = '<p>テスト</p><!-- coment(ここを除去) --><a href>リンク</a>';
     echo strip_tags($text,'<p><a>') . "\n";
     
@@ -73,8 +77,8 @@
     }
     
     //array_merge
-    $array1 = array("アメリカ"=>"ワシントン", "フランス"=>"パリ", "イギリス"=>"ロンドン");
-    $array2 = array("日本"=>"東京", "中国"=>"北京", "韓国"=>"ソウル");
+    $array1 = array("アメリカ" => "ワシントン", "フランス" => "パリ", "イギリス" => "ロンドン");
+    $array2 = array("日本" => "東京", "中国" => "北京", "韓国" => "ソウル");
     $countris = array_merge($array1, $array2);
     foreach ($countris as $country => $capital) {
         echo $country . "→" . $capital . "\n";
@@ -86,6 +90,7 @@
     echo '来週  ' . date('Y-m-d', $nextWeek) . "\n";
     
     //mktime, date
+    //10日後までの期間（日にち）の表示
     for ($i = 0; $i < 10; $i++) {
         $display_ten_days_later = mktime(0, 0, 0, 2, 12+$i, 2020);
         echo date('Y/m/d H:i:s', $display_ten_days_later) . "\n";
