@@ -62,12 +62,12 @@
 //課題5
 
     //strip_tagsの除去前
-    $text = '<p>テスト</p><!-- coment(ここを除去) --><a href>リンク</a>';
+    $text = '<p>テスト</p><h1>coment(ここを除去)</h1><a href>リンク</a>';
     echo $text . "\n";
         
     //strip_tagsした後（<p>タグと<a>タグだけの表示）
-    $text = '<p>テスト</p><!-- coment(ここを除去) --><a href>リンク</a>';
-    echo strip_tags($text,'<p><a>') . "\n";
+    $text = '<p>テスト</p><h1>coment(ここを除去)</h1><a href>リンク</a>';
+    echo strip_tags($text, '<p><a>') . "\n";
     
     //array_push
     $fruits = array("orange", "banana");
@@ -90,9 +90,9 @@
     echo '来週  ' . date('Y-m-d', $nextWeek) . "\n";
     
     //mktime, date
-    //10日後までの期間（日にち）の表示
+    //10日間までの期間（日にち）の表示
     for ($i = 0; $i < 10; $i++) {
-        $display_ten_days_later = mktime(0, 0, 0, 2, 12+$i, 2020);
-        echo date('Y/m/d H:i:s', $display_ten_days_later) . "\n";
+        $period = mktime(0, 0, 0, 2, 12 + $i, 2020);
+        echo date('Y/m/d H:i:s', $period) . "\n";
     }
 ?>
